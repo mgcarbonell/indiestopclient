@@ -1,6 +1,9 @@
 
 
 .App {
-    background-color: antiquewhite;
+    /* display: flex; */
+    /* background-color: antiquewhite; */
+    /* flex-direction: column; */
+    /* align-items: center; */
 }
 

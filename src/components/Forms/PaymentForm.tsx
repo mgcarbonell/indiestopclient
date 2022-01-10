@@ -5,6 +5,7 @@ import { Button } from "@mui/material"
 import { ShoppingCartContext } from "../../context/ShoppingCartContext"
 import { Paper } from "@mui/material"
 import styled from "@emotion/styled"
+import "./paymentform-style.css"
 
 const CardElementContainer = styled.div`
   height: 40px;

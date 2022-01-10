@@ -1,7 +1,8 @@
 .body {
-  margin: 0 auto;
+  padding: 10px;
+  margin: 10px;
 }
 
 .payment-form--title {
-  padding: 5;
+  margin: 5px;
 }

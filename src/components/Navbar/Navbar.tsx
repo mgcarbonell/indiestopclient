@@ -19,9 +19,9 @@ const Navbar: React.FC = () => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" className="navbar--base">
+      <AppBar position="static" className="navbar">
         <Toolbar>
-          <IconButton>
+          <IconButton className="home-btn">
             <Link to={"/"}>
               <Home />
             </Link>
@@ -30,7 +30,10 @@ const Navbar: React.FC = () => {
             IndieStop
           </Typography>
           <IconButton>
-            <Badge badgeContent={quantity}>
+            <Badge 
+              badgeContent={quantity} 
+              color="secondary"
+            >
               <Link to={"/cart"}>
                 <ShoppingCartIcon />
               </Link>
