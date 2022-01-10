@@ -41,11 +41,6 @@ const App: React.FC = () => {
     })
   }, [])
 
-  useEffect(() => {
-    // console.log(`items => `, items)
-    // console.log(`total => `, total)
-    // console.log(`quantity => `, quantity)
-  }, [items])
   return (
     <div className="App">
       <Navbar />

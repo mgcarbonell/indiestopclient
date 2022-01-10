@@ -1,7 +1,6 @@
 import React from "react"
 import ProductCard from "./ProductCard"
-// import IProductProps from "../../interfaces/productProp.interface"
-
+import "./productlist-style.css"
 const ProductList = ({ products }: any) => {
   // const [products, setProducts] = useState([] as any[])
   // const [isLoaded, setIsLoaded] = useState<boolean>(false)
@@ -14,10 +13,11 @@ const ProductList = ({ products }: any) => {
   //     .then(() => setIsLoaded(true))
   // }, [])
   return (
-    <div>
+    <div className="product-card--container">
       {products.length > 0 ? (
         products.map((product: any, index: number) => (
           <ProductCard
+
             products={products}
             key={index}
             id={product.id}

@@ -1,9 +1,9 @@
 import React, { useContext, useEffect } from "react"
-import { Card, CardContent, CardMedia, Fab, Typography } from "@mui/material"
+import { Card, CardContent, CardMedia, Fab, Typography, Box } from "@mui/material"
 import { AddShoppingCart } from "@mui/icons-material"
 import IProductCardProps from "../../interfaces/productProp.interface"
 import { ShoppingCartContext } from "../../context/ShoppingCartContext"
-// import Cart from "../../models/cart"
+import "./productcard-style.css"
 
 const getLSItems = () => {
   let d = window.localStorage.getItem("items")
@@ -36,25 +36,27 @@ const ProductCard = ({
   }
 
   return (
-    <div>
-      <Card>
+    <div className="card-container">
+      <Card sx={{ display: "flex" }}>
         <CardMedia>
-          <img src={img_url} alt={`A ${title} onesie`} />
+          <img className="onesie-img" src={img_url} alt={`A ${title} onesie`} />
         </CardMedia>
-        <CardContent>
-          <Typography variant="h5" component="h2">
-            {title}
-          </Typography>
-          <Typography variant="body2" component="p">
-            {description}
-          </Typography>
-          <Typography variant="h6" component="h2">
-            ${price}
-          </Typography>
+        <Box>
+          <CardContent>
+            <Typography variant="h5" component="h2">
+              {title}
+            </Typography>
+            <Typography variant="body2" component="p">
+              {description}
+            </Typography>
+            <Typography variant="h6" component="h2">
+              ${price}
+            </Typography>
           <Fab color="primary" aria-label="add to cart" onClick={addToCart}>
             <AddShoppingCart />
           </Fab>
         </CardContent>
+        </Box>
       </Card>
     </div>
   )

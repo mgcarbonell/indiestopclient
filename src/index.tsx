@@ -5,17 +5,22 @@ import { Elements } from "@stripe/react-stripe-js"
 import { loadStripe } from "@stripe/stripe-js"
 import { ShoppingCartProvider } from "./context/ShoppingCartContext"
 import App from "./App"
+import { CssBaseline } from "@mui/material"
 
 const stripePromise = loadStripe(
   process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY as string
 )
+
+
 ReactDOM.render(
   <React.StrictMode>
     <ShoppingCartProvider>
       <Elements stripe={stripePromise}>
-        <Router>
-          <App />
-        </Router>
+				<Router>
+					<CssBaseline>
+						<App />
+					</CssBaseline>
+				</Router>
       </Elements>
     </ShoppingCartProvider>
   </React.StrictMode>,

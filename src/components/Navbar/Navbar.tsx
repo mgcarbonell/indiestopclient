@@ -11,6 +11,7 @@ import {
 } from "@mui/material"
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart"
 import { Home } from "@mui/icons-material"
+import "./navbar-style.css"
 // Add a logo or something
 
 const Navbar: React.FC = () => {
